@@ -1,0 +1,48 @@
+n=int(input())
+x=0
+y=1
+p=n
+s=n-1
+v=n+1
+f=0
+while(s):
+    n=s
+    while(x<=n):
+        t=x
+        x=x+y
+        y=t
+        if(s==x):
+            f=1
+            break
+    if(f==1):
+        break
+    else:
+        s-=1
+        x=0
+        y=1
+x=0
+y=1
+f=0
+while(v):
+    n=v
+    while(x<=v):
+        t=x
+        x=x+y
+        y=t
+        if(v==x):
+            f=1
+            break
+    if(f==1):
+        break
+    else:
+        v+=1
+        x=0
+        y=1
+a=p-s
+b=v-p
+if(a>b):
+    print(v)
+elif(b>a):
+    print(s)
+else:
+    print(s,v)
